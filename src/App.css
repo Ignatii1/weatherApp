@@ -85,10 +85,6 @@ h1 {
 
 /* form starting stylings ------------------------------- */
 
-form {
-  height: 200px;
-}
-
 .group {
   position: relative;
 }

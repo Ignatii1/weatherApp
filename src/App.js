@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=${API_KEY}`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=${API_KEY}`,
         {
           referrerPolicy: 'no-referrer-when-downgrade',
         }
