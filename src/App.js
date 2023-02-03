@@ -5,7 +5,7 @@ const API_KEY = '081891c3558231a7772c677f6123db3b'
 
 function App() {
   const [weather, setWeather] = useState({})
-  const [city, setCity] = useState('London')
+  const [city, setCity] = useState('Москва')
   const [cityInput, setCityInput] = useState('')
 
   useEffect(() => {

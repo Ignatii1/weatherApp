@@ -64,10 +64,22 @@ h1 {
   margin-top: 40px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .weather-card {
-    width: 90%;
+    width: 230px;
     height: 220px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .temperature {
+    font-size: 15px;
+  }
+
+  .description {
+    font-size: 15px;
   }
 }
 
