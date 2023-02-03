@@ -18,6 +18,7 @@ function App() {
       )
       const data = await response.json()
       setWeather(data)
+      console.log(data)
     }
     fetchData()
   }, [city])
@@ -30,20 +31,28 @@ function App() {
   return (
     <div className="container">
       <header>
-        <h1>Салам алейкум</h1>
+        <h1>Пусть в вашем доме всегда будет хорошая погода</h1>
       </header>
       <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          placeholder="Enter a city"
-          value={cityInput}
-          onChange={(e) => setCityInput(e.target.value)}
-        />
-        <button type="submit">Search</button>
+        <div className="group">
+          <input
+            type="text"
+            placeholder="&nbsp;"
+            value={cityInput}
+            onChange={(e) => setCityInput(e.target.value)}
+          />
+          <span className="highlight"></span>
+          <span className="bar"></span>
+          <label></label>
+        </div>
+        <button type="submit" className="search-button">
+          Поиск
+        </button>
       </form>
       <article>
         {weather.main ? (
           <div className="weather-card">
+            {weather.name && <p className="city">{weather.name}</p>}
             <p className="temperature">
               Температура: {(weather.main.temp - 273.15).toFixed(1)}
             </p>
